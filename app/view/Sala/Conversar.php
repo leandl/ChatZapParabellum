@@ -41,6 +41,13 @@
     var mensagens = [];
     var lastTimeID = 1;
     var sala = <?php echo ($id_sala) ? $id_sala: '0'?>;
+    
+    $('#enviar').Element.addEventListener('keydown', function(event){
+      const keyCode = event.key;
+      if(keyCode){
+          postMensagem();
+      }
+    });)
 
     var postMensagem = () => {
         console.log($('#mensagem').serialize());
